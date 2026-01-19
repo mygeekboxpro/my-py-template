@@ -76,7 +76,7 @@ htmlcov/
 .tox/
 .nox/
 .ipynb_checkpoints/
-.python-version
+# .python-version
 
 ########################################
 # JAVA / JVM

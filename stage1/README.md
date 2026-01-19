@@ -167,6 +167,18 @@ ctrl+C
 
 ## 📌 FAQ
 
+#### Regenerate the lock after updating pyproject.toml:
+```bash
+uv lock --upgrade
+uv sync
+```
+
+#### If you want to force just one dependency line to move:
+```bash
+uv lock --upgrade-package openai-agents
+uv sync
+```
+
 ---
 
 ## 📌Troubleshooting: Common failure symptoms & fixes
