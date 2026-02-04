@@ -129,7 +129,6 @@ venv.bak/
 
 target/
 build/
-out/
 stage0/out/
 .gradle/
 .gradle/
