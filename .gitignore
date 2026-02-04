@@ -18,12 +18,22 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+.env.local
+.env.*.local
 secrets.*
 *.key
 *.pem
 *.crt
 *.pfx
 *.keystore
+
+
+########################################
+# Configuration (sensitive)
+########################################
+config/settings.yaml
+config/settings.*.yaml
+
 
 ########################################
 # LOGS / TEMP FILES
@@ -38,26 +48,31 @@ secrets.*
 *.orig
 *.retry
 *.pid
+data/logs/
 
 ########################################
 # PYTHON
 ########################################
 # Python virtual environments (any depth)
-.venv/
-**/.venv/
-venv/
-**/venv/
-.env/
-**/.env/
-ENV/
-**/ENV/
-env.bak/
-**/env.bak/
-venv.bak/
-**/venv.bak/
-
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+.installed.cfg
+MANIFEST
 *.pyd
 *.pyo
 *.pkl
@@ -76,7 +91,29 @@ htmlcov/
 .tox/
 .nox/
 .ipynb_checkpoints/
-# .python-version
+.hypothesis/
+
+# Type checking
+.dmypy.json
+dmypy.json
+
+
+########################################
+# Virtual Environment
+########################################
+.venv/
+**/.venv/
+venv/
+**/venv/
+.env/
+**/.env/
+ENV/
+**/ENV/
+env.bak/
+**/env.bak/
+venv.bak/
+**/venv.bak/
+
 
 ########################################
 # JAVA / JVM
@@ -93,6 +130,7 @@ htmlcov/
 target/
 build/
 out/
+stage0/out/
 .gradle/
 .gradle/
 hs_err_pid*
@@ -132,6 +170,7 @@ dist/
 *.ipr
 *.iws
 .idea_modules/
+*~
 
 ########################################
 # IDEs — VS CODE
@@ -218,6 +257,14 @@ junit.xml
 *.tar.gz
 *.rar
 *.7z
+
+
+########################################
+# Runtime data
+########################################
+data/artifacts/
+data/cache/
+
 
 ########################################
 # MISC / TOOLS
